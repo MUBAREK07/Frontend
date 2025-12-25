@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubarek Bushra - Graphic Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional, but good for aesthetics) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for custom typography (example: Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Mubarek Bushra</a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Mubarek Bushra</span>.</h1>
+                    <p class="tagline">A Creative Graphic Designer passionate about crafting visually compelling stories.</p>
+                    <a href="#portfolio" class="btn primary-btn">View My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn secondary-btn">Let's Connect <i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-spacing">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/profile-pic.jpg" alt="Your Name Profile Picture" loading="lazy">
+                    </div>
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <p>Hello! I'm Mubarek Bushra, a graphic designer with 1 and half years of experience, specializing in branding, social media post, and print media. I believe that good design is not just about aesthetics, but about clear communication and problem-solving. My goal is to help businesses and individuals translate their vision into impactful visual experiences.</p>
+                        <p>I thrive on bringing fresh ideas to life and collaborating closely with clients to ensure their message resonates with their audience. Let's create something amazing together!</p>
+                        <div class="skills-list">
+                            <h3>My Skills:</h3>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Adobe Photoshop</li>
+                                <li><i class="fas fa-check-circle"></i> Canva</i></li>
+                                
+                                <li><i class="fas fa-check-circle"></i> Figma</li>
+                                <li><i class="fas fa-check-circle"></i> Brand Identity</li>
+                                <li><i class="fas fa-check-circle"></i> UI/UX Principles</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn primary-btn">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-spacing bg-light">
+            <div class="container">
+                <h2>My Work</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="branding">Logo Design</button>
+                    <button class="filter-btn" data-category="web-design">UI/UX Design</button>
+                    <button class="filter-btn" data-category="print-media">Print Media</button>
+                    <button class="filter-btn" data-category="illustration">Social Media Post</button>
+                </div>
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Portfolio items will be dynamically loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-spacing">
+            <div class="container">
+                <h2>What I Offer</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb service-icon"></i>
+                        <h3>Brand Identity & Logo Design</h3>
+                        <p>Crafting unique and memorable brand identities that resonate with your target audience and stand the test of time.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-globe service-icon"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing intuitive and aesthetically pleasing user interfaces for websites and applications, focusing on user experience.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-print service-icon"></i>
+                        <h3>Print Media & Layout</h3>
+                        <p>From brochures and flyers to magazines and posters, I create impactful print designs that effectively convey your message.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-paint-brush service-icon"></i>
+                        <h3>Social media poster design</h3>
+                        <p>blends clear messaging, bold visuals, and balanced layout to grab attention fast to add a unique visual flair to your projects, campaigns, or personal brand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    <!--  Testimonials Section (Optional but highly recommended) -->    
+         <!--<section id="testimonials" class="testimonials section-spacing bg-light">
+            <div class="container">
+                <h2>What Clients Say</h2>
+                <div class="testimonial-slider" id="testimonial-slider">
+
+                    <button id="prev-testimonial" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-testimonial" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-spacing">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p class="contact-tagline">Have a project in mind or just want to say hello? Drop me a line!</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Details</h3>
+                        <p><i class="fas fa-envelope"></i> bmubarek52@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +251907444766</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.behance.net/mubarekbushra1" target="_blank"><i class="fab fa-behance"></i></a>
+                            <a href="https://dribbble.com/mubarek-bushra-ug" target="_blank"><i class="fab fa-dribbble"></i></a>
+                            <a href="https://www.instagram.com/muba2_007/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <h3>Send Me a Message</h3>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span>Mubarek Bushra. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal (Hidden by default, shown by JS) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="Project Image" id="modal-project-image">
+            <h3 id="modal-project-title"></h3>
+            <p id="modal-project-category"></p>
+            <p id="modal-project-description"></p>
+            <p id="modal-project-tools"><strong>Tools Used:</strong> </p>
+            <a href="#" id="modal-case-study-link" target="_blank" class="btn primary-btn" style="display: none;">View Case Study <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
