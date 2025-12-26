@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             thumbnail: 'images/Mubarek Logo.jpg',
             imageUrl: 'images/Mubarek Logo.jpg',
             description: 'This design describes me as I am a graphic designer with easy contact information on the design',
-            fullDescription: 'The logo features a sleek, modern typographic design with creative letter extensions that give â€œMUBAREKâ€ a unique identity. Paired with a minimalist layout, subtle coloring, and clear contact icons, it presents a professional and stylish brand image for a graphic designer.',
+            fullDescription: 'The logo features a sleek, modern typographic design with creative letter extensions that give the logo a unique identity. Paired with a minimalist layout, subtle coloring, and clear contact icons, it presents a professional and stylish brand image for a graphic designer.',
             toolsUsed: ['Adobe Photoshop'],
             
         },
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 11,
             category: 'social media post',
-            title: 'Tutoring Services Poster',
+            title: 'Tutoring Service Poster',
             thumbnail: 'images/4.jpg',
             imageUrl: 'images/4.jpg',
             description: 'Colorful educational poster for “Rise Up Astegn Company” tutoring, highlighting math, physics, chemistry, English and computer skills for grades 6–12, with engaging child–mentor imagery and clear contact and social media details.',
