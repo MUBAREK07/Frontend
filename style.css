@@ -41,20 +41,41 @@ body {
 h1, h2, h3, h4 {
     color: var(--text-color-dark);
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
-h1 { font-size: 3rem; font-weight: 700; }
+.hero-content h1 {
+    margin-top: 110px;
+}
 h2 { font-size: 2.5rem; font-weight: 600; text-align: center; margin-bottom: 2.5rem; }
 h3 { font-size: 1.75rem; font-weight: 600; }
-p { margin-bottom: 1rem; color: var(--text-color-light); }
+p { margin-bottom: 0.75rem; color: var(--text-color-light); }
 
 .highlight {
     color: var(--primary-color);
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2em;
+    animation: float 3s ease-in-out infinite;
 }
 
 .section-spacing {
     padding: 80px 0;
+}
+
+.about.section-spacing {
+    padding-top: 40px;
+}
+
+.about p {
+    margin-bottom: 0.3rem;
+}
+
+.about h2 {
+    margin-bottom: 0.3rem;
+}
+
+.about h3 {
+    margin-bottom: 0.3rem;
 }
 
 .bg-light {
@@ -83,9 +104,8 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     margin-top:15px;
 }
 
-.primary-btn:hover {
-    background-color: var(--secondary-color);
-    box-shadow: var(--shadow-light);
+.hero-content .btn {
+    margin-top: 80px;
 }
 
 .secondary-btn {
@@ -107,7 +127,7 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
 /* Header & Navigation */
 .header {
     background-color: var(--card-bg);
-    padding: 20px 0;
+    padding: 6px 0;
     box-shadow: var(--shadow-light);
     position: sticky;
     top: 0;
@@ -121,10 +141,23 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    animation: logoIntro 1s ease-out 0.5s both;
+}
+
+@keyframes logoIntro {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .nav-list {
@@ -187,8 +220,7 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     display: flex;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/hero-bg.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
 }
 
 .hero-content {
@@ -211,7 +243,7 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    gap: 70px;
     align-items: center;
 }
 
@@ -220,10 +252,12 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
     transition: transform 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .about-image img:hover {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
 }
 
 .about-content h2 {
@@ -295,10 +329,12 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     cursor: pointer;
     text-align: center;
     border: 1px solid var(--border-color);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
     box-shadow: var(--shadow-medium);
 }
 
@@ -340,10 +376,12 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
     box-shadow: var(--shadow-medium);
 }
 
@@ -603,12 +641,15 @@ p { margin-bottom: 1rem; color: var(--text-color-light); }
     width: 90%;
     position: relative;
     box-shadow: var(--shadow-medium);
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
     transition: transform 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
 }
 
 .modal.active .modal-content {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 
 .modal-content img {

@@ -102,13 +102,24 @@ document.addEventListener('DOMContentLoaded', () => {
             caseStudyLink: '#'
         },
         {
-            id: 9,
+            id: 10,
             category: 'social media post',
             title: 'Netsishop Furniture',
             thumbnail: 'images/Netsishop Furniture_3.jpg',
             imageUrl: 'images/Netsishop Furniture_3.jpg',
             description: 'Vintage-style furniture sale poster featuring ornate bookcases on a stage, striped brown background, bold “NETSISHOP FURNITURE” text, and black discount badge advertising 45% off with an “Order Now” button.',
             fullDescription: 'Vintage furniture advertisement showcasing three ornate wooden bookcases filled with colorful books and decorative items, arranged on a round stage against a striped brown background. The poster headline reads “NETSISHOP FURNITURE,” with a tagline “Furniture that defines your lifestyle.” A black discount badge highlights “45% OFF” and an “ORDER NOW” button, visually guiding viewers toward a limited-time promotional furniture offer.',
+            toolsUsed: ['Adobe  Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 11,
+            category: 'social media post',
+            title: 'Tutoring Services Poster',
+            thumbnail: 'images/4.jpg',
+            imageUrl: 'images/4.jpg',
+            description: 'Colorful educational poster for “Rise Up Astegn Company” tutoring, highlighting math, physics, chemistry, English and computer skills for grades 6–12, with engaging child–mentor imagery and clear contact and social media details.',
+            fullDescription: 'The poster design for Rise Up Astegn Company uses bright orange and blue tones with a rising-sun logo to symbolize growth and inspiration for students in grades 6–12. It features bold, friendly typography and a checklist highlighting key subjects: mathematics, physics, chemistry, English, and computer skills. A circular photo layout shows caring tutor–student interaction, reinforcing a supportive learning environment. Clear Amharic messaging, concise English headings, and easily visible phone numbers ensure quick understanding and response. Social media icons at the bottom emphasize modern, connected tutoring services for Addis Ababa learners.',
             toolsUsed: ['Adobe  Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
             caseStudyLink: '#'
         },
@@ -169,31 +180,33 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Smooth scrolling for navigation links
-    function setupSmoothScrolling() {
+    // Navigation for showing/hiding sections
+    function setupNavigation() {
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    // Offset by header height for fixed header
-                    const headerOffset = header.offsetHeight;
-                    const elementPosition = targetSection.getBoundingClientRect().top + window.scrollY;
-                    const offsetPosition = elementPosition - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile nav if open
-                    if (navList.classList.contains('active')) {
-                        toggleMobileNav();
-                    }
+                const targetId = link.getAttribute('href').substring(1); // Remove #
+                showSection(targetId);
+                // Update active nav
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                // Close mobile nav if open
+                if (navList.classList.contains('active')) {
+                    toggleMobileNav();
                 }
             });
         });
+    }
+
+    // Function to show a specific section and hide others
+    function showSection(sectionId) {
+        const allSections = document.querySelectorAll('main section');
+        allSections.forEach(section => section.classList.add('hidden'));
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.remove('hidden');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     // Toggle mobile navigation menu
@@ -348,30 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonials[currentTestimonialIndex].classList.add('active');
     }
 
-    // Intersection Observer for active navigation links
-    const sections = document.querySelectorAll('section');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.7 // Section is considered active when 70% visible
-    };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${entry.target.id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        sectionObserver.observe(section);
-    });
 
 
     // Lazy Loading Images (for images not in the initial viewport)
@@ -423,8 +413,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set current year
     setCurrentYear();
 
-    // Setup smooth scrolling
-    setupSmoothScrolling();
+    // Setup navigation
+    showSection('hero');
+    setupNavigation();
+
+    // Handle all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            console.log('Link clicked:', href);
+            if (href !== '#') {
+                e.preventDefault();
+                const id = href.substring(1);
+                console.log('Showing section:', id);
+                showSection(id);
+                // Update nav active
+                navLinks.forEach(l => {
+                    l.classList.remove('active');
+                    if (l.getAttribute('href') === href) {
+                        l.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
 
     // Mobile navigation toggle
     hamburger.addEventListener('click', toggleMobileNav);
@@ -436,6 +448,28 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterProjects(button.dataset.category);
+        });
+    });
+
+    // Service cards click to navigate to portfolio with filter
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').textContent;
+            let category = 'all'; // default
+            if (title.includes('Brand Identity') || title.includes('Logo Design')) {
+                category = 'Logo Design';
+            } else if (title.includes('UI/UX')) {
+                category = 'UI/UX Design';
+            } else if (title.includes('Print Media')) {
+                category = 'Print Media';
+            } else if (title.includes('Social media')) {
+                category = 'social media post';
+            }
+            showSection('portfolio');
+            filterProjects(category);
+            // Update nav active
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector('.nav-link[href="#portfolio"]').classList.add('active');
         });
     });
 

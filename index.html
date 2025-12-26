@@ -8,7 +8,9 @@
     <!-- Font Awesome for icons (optional, but good for aesthetics) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts for custom typography (example: Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Bricolage+Grotesque:wght@400;700&family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Preload hero background image -->
+    <link rel="preload" href="images/hero-bg.jpg" as="image">
 </head>
 <body>
 
@@ -35,7 +37,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero">
+        <section id="hero" class="hero hidden">
             <div class="container">
                 <div class="hero-content">
                     <h1>Hi, I'm <span class="highlight">Mubarek Bushra</span>.</h1>
@@ -47,15 +49,15 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about section-spacing">
+        <section id="about" class="about section-spacing hidden">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image">
-                        <img src="images/profile-pic.jpg" alt="Your Name Profile Picture" loading="lazy">
+                        <img src="images/1.jpg" alt="Your Name Profile Picture" loading="lazy">
                     </div>
                     <div class="about-content">
                         <h2>About Me</h2>
-                        <p>Hello! I'm Mubarek Bushra, a graphic designer with 1 and half years of experience, specializing in branding, social media post, and print media. I believe that good design is not just about aesthetics, but about clear communication and problem-solving. My goal is to help businesses and individuals translate their vision into impactful visual experiences.</p>
+                        <p>Hello! I'm Mubarek Bushra, a graphic designer with 1 and half years of experience, specializing in branding, social media post, and print media. I believe that good design is not just about aesthetics, but about clear communication and problem solving. My goal is to help businesses and individuals translate their vision into impactful visual experiences.</p>
                         <p>I thrive on bringing fresh ideas to life and collaborating closely with clients to ensure their message resonates with their audience. Let's create something amazing together!</p>
                         <div class="skills-list">
                             <h3>My Skills:</h3>
@@ -75,15 +77,15 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio section-spacing bg-light">
+        <section id="portfolio" class="portfolio section-spacing bg-light hidden">
             <div class="container">
                 <h2>My Work</h2>
                 <div class="portfolio-filters">
                     <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="branding">Logo Design</button>
-                    <button class="filter-btn" data-category="web-design">UI/UX Design</button>
-                    <button class="filter-btn" data-category="print-media">Print Media</button>
-                    <button class="filter-btn" data-category="illustration">Social Media Post</button>
+                    <button class="filter-btn" data-category="Logo Design">Logo Design</button>
+                    <button class="filter-btn" data-category="UI/UX Design">UI/UX Design</button>
+                    <button class="filter-btn" data-category="Print Media">Print Media</button>
+                    <button class="filter-btn" data-category="social media post">Social Media Post</button>
                 </div>
                 <div class="portfolio-grid" id="portfolio-grid">
                     <!-- Portfolio items will be dynamically loaded here by JavaScript -->
@@ -92,7 +94,7 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="services section-spacing">
+        <section id="services" class="services section-spacing hidden">
             <div class="container">
                 <h2>What I Offer</h2>
                 <div class="services-grid">
@@ -133,7 +135,7 @@
         </section> -->
 
         <!-- Contact Section -->
-        <section id="contact" class="contact section-spacing">
+        <section id="contact" class="contact section-spacing hidden">
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p class="contact-tagline">Have a project in mind or just want to say hello? Drop me a line!</p>
@@ -171,6 +173,42 @@
                         <button type="submit" class="btn primary-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="section-spacing hidden">
+            <div class="container">
+                <h2>Privacy Policy</h2>
+                <p>This Privacy Policy describes how Mubarek collects, uses, and protects your information when you visit our portfolio website.</p>
+                <h3>Information We Collect</h3>
+                <p>We may collect personal information such as your name, email address, and message when you contact us through the form on our site. We do not collect data automatically.</p>
+                <h3>How We Use Your Information</h3>
+                <p>Your information is used solely to respond to your inquiries. We do not share, sell, or rent your data to third parties.</p>
+                <h3>Data Security</h3>
+                <p>We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure.</p>
+                <h3>Changes to This Policy</h3>
+                <p>We may update this policy at any time. Please check back periodically.</p>
+                <h3>Contact Us</h3>
+                <p>If you have questions, email us at bmubarek52@gmail.com.</p>
+            </div>
+        </section>
+
+        <!-- Terms of Service Section -->
+        <section id="terms" class="section-spacing hidden">
+            <div class="container">
+                <h2>Terms of Service</h2>
+                <p>These Terms of Service ("Terms") govern your use of Mubarek Bushra's portfolio website ("the Site"). By accessing the Site, you agree to these Terms.</p>
+                <h3>Use of the Site</h3>
+                <p>The Site is for informational purposes. You may view and use the content for personal, non-commercial purposes only.</p>
+                <h3>Intellectual Property</h3>
+                <p>All content on the Site, including designs, text, and images, is owned by Mubarek Bushra and protected by copyright laws. You may not reproduce or distribute without permission.</p>
+                <h3>Limitation of Liability</h3>
+                <p>We are not liable for any damages arising from your use of the Site. Use at your own risk.</p>
+                <h3>Changes to Terms</h3>
+                <p>We may update these Terms at any time. Continued use of the Site constitutes acceptance of the changes.</p>
+                <h3>Contact Us</h3>
+                <p>For questions, email bmubarek52@gmail.com.</p>
             </div>
         </section>
     </main>
