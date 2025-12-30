@@ -112,12 +112,17 @@ p {
 }
 
 .primary-btn {
-  background-color: var(--primary-color);
-  color: var(--card-bg);
+  background-color: transparent;
+  color: var(--primary-color);
   margin-right: 15px;
   margin-top: 15px;
+  border-color: var(--primary-color);
 }
-
+.primary-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--card-bg);
+  box-shadow: var(--shadow-light);
+}
 .hero-content .btn {
   margin-top: 60px;
 }
@@ -191,9 +196,8 @@ p {
   text-decoration: none;
   font-family: "Bricolage Grotesque", sans-serif;
   display: inline-block;
-  /* animation: logoIntro 0.8s ease-out, logoPulse 3s ease-in-out 0.8s infinite; */
+  animation: logoIntro 0.8s ease-out, logoPulse 3s ease-in-out 0.8s infinite; 
 }
-
 @keyframes logoIntro {
   0% {
     opacity: 0;
@@ -202,22 +206,6 @@ p {
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-/* gentle continuous effect */
-@keyframes logoPulse {
-  0% {
-    transform: translateY(0);
-    letter-spacing: 0;
-  }
-  50% {
-    transform: translateY(-4px);
-    letter-spacing: 1px;
-  }
-  100% {
-    transform: translateY(0);
-    letter-spacing: 0;
   }
 }
 
