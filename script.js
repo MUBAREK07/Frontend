@@ -123,6 +123,28 @@ document.addEventListener('DOMContentLoaded', () => {
             toolsUsed: ['Adobe  Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
             caseStudyLink: '#'
         },
+        {
+            id: 12,
+            category: 'social media post',
+            title: 'AAU 75th Anniversary Sport Festival',
+            thumbnail: 'images/7.jpg',
+            imageUrl: 'images/7.jpg',
+            description: 'Design a poster for AAU 75th anniversary sport festival program that aligns with the university previous color choice for the poster design and their font style that is also used as a standard.',
+            fullDescription: 'Design a poster for AAU 75th anniversary sport festival program that aligns with the university previous color choice for the poster design which is red and light blue that represents Addis Ababa University and their font style that is also used as a standard. The composition and layout of the text align to the center and th logo that represents the anniversary is to the top left corner and also AAU logo is to the top right corner of the poster, which implies that the poster have a better looking and have more white space for more aesthetics.',
+            toolsUsed: ['Adobe  Photoshop', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 13,
+            category: 'Brochures',
+            title: 'Aydas Nails Cosmotic Brochure',
+            thumbnail: 'images/aydas_nails_cosmotic brochure.jpg',
+            imageUrl: 'images/aydas_nails_cosmotic brochure.jpg',
+            description: 'Clean cosmetic brochure for “Aydas Nails” showing nail services, contact details, QR code, website, and home service message with pink gradients and manicure imagery.',
+            fullDescription: 'Elegant 2025 cosmetic brochure for Aydas Nails showcasing key services like nail fixing, pedicure, manicure, piercing, pampering, and acrylic overlay. The layout features bold section titles, vibrant pink gradients, manicure photography, and a stylish portrait. Centrally placed contact details, QR code, website, and “Home service is always available” tagline emphasize accessibility and professionalism.',
+            toolsUsed: ['Adobe Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
+            caseStudyLink: '#'
+        },
         // Add more projects as needed
     ];
 
