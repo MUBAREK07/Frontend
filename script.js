@@ -145,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
             toolsUsed: ['Adobe Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
             caseStudyLink: '#'
         },
+        {
+            id: 14,
+        }
+        
         // Add more projects as needed
     ];
 
