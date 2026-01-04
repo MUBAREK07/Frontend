@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 13,
-            category: 'Brochures',
+            category: 'Print Media',
             title: 'Aydas Nails Cosmotic Brochure',
             thumbnail: 'images/aydas_nails_cosmotic brochure.jpg',
             imageUrl: 'images/aydas_nails_cosmotic brochure.jpg',
@@ -147,8 +147,37 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 14,
+            category: 'Logo Design',
+            title: 'Maleda Restaurant',
+            thumbnail: 'images/maleda logo.jpg',
+            imageUrl: 'images/maleda logo.jpg',
+            description: 'This logo is for the restaurant called maleda which is an Ethiopian traditional food restaurant that serves different kinds of Ethiopian foods.',
+            fullDescription: 'This logo is for the restaurant called maleda which is an Ethiopian traditional food restaurant that serves different kinds of Ethiopian foods.The logo features traditional Ethiopian patterns and colors to reflect the cultural heritage and authenticity of the cuisine offered at Maleda Restaurant. The dedign incorporates elements that symbolize Ethiopian hospitality and culinary excellence.',
+            toolsUsed: ['Adobe Photoshop', 'and', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 15,
+            category: 'Logo Design',
+            title: 'Cloth Store Logo',
+            thumbnail: 'images/DR CLOTHES.jpg',
+            imageUrl: 'images/DR CLOTHES.jpg',
+            description: 'This logo is for the cloth store called DR CLOTHES which is a modern clothing store that serves different kinds of modern clothes.',
+            fullDescription:'This logo is for the cloth store called DR CLOTHES which is a modern clothing store that serves different kinds of modern clothes. The Logo features a sleek and contemporary design that reflects the trendy and fashionable nature of the clothing offered at DR CLOTHES. The design incorporates elements that symbolize stylishness and modernity.',
+            toolsUsed: ['Adobe Photoshop', 'and', 'Canva'],
+            caseStudyLink:'#'
+        },
+        {
+            id: 16,
+            category: 'Logo Design',
+            title: 'Robotics Club Logo',
+            thumbnail: 'images/Team Champion.jpg',
+            imageUrl: 'images/Team Champion.jpg',
+            description: 'This logo is for the robotics club called Team Champion which is a modern robotics club that serves different kind of robotics activities.',
+            fullDescription: 'This logo is for the robotics club called Team Champion which is a modern robotics club that serves different kind of activities. The Logo features a sleek and contemporary design that reflects the innovative and technological nature of the robotics activities of Team Champion. The design incorporates elements that symbolize robotics and modernity.',
+            toolsUsed: ['Adobe Photoshop', 'and' , 'Canva'],
+            caseStudyLink: '#'
         }
-        
         // Add more projects as needed
     ];
 
