@@ -177,7 +177,40 @@ document.addEventListener('DOMContentLoaded', () => {
             fullDescription: 'This logo is for the robotics club called Team Champion which is a modern robotics club that serves different kind of activities. The Logo features a sleek and contemporary design that reflects the innovative and technological nature of the robotics activities of Team Champion. The design incorporates elements that symbolize robotics and modernity.',
             toolsUsed: ['Adobe Photoshop', 'and' , 'Canva'],
             caseStudyLink: '#'
-        }
+        },
+        {
+            id: 17,
+            category: 'Logo Design',
+            title: 'ሳባውያን',
+            thumbnail: 'images/Sabawian.jpg',
+            imageUrl: 'images/Sabawian.jpg',
+            description: 'This Logo is for the religious group called ሳባውያን which is an Ethiopian religious group that serves different kind of religious activities.',
+            fullDescription: 'This Logo is for the religious group called ሳባውያን which is an Ethiopian religious group that serves different kind of religious activities. The Logo features a sleek and contemporary design that reflects the spiritual and cultural nature of the religious activities of ሳባውያን. The design incorporates elements that symbolizes the spiritual and cultural nature of the religious activities.',
+            toolsUsed: ['Adobe Photoshop', 'and', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 18,
+            category: 'social media post',
+            title: 'Atopiclair',
+            thumbnail: 'images/8.jpg',
+            imageUrl: 'images/8.jpg',
+            description: '',
+            fullDescription: '',
+            toolsUsed: ['Adobe Photoshop', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 19,
+            category: 'social media post',
+            title: 'Menu Design',
+            thumbnail: 'images/9.jpg',
+            imageUrl: 'images/9.jpg',
+            description: 'This poster is for the restaurant which serves new food that that is not served before and add chicken leg with two kind of sauces to their menu to express to their customer.',
+            fullDescription: 'This poster is for the restaurant which serves new food that that is not served before and add chicken leg with two kind of sauces to their menu to express to their customer. This menu poster for the restaurant is designed by combination of two color background one is to the right and the other one is to left for better comparison to display the foreground clearly with clear food delivery menu and 10% discount that is always for the new food served by the home and their phone number for the person who wants to order the food and delivered to the person home with clear order button and websites link.',
+            toolsUsed: ['Adobe Photoshop', 'Canva'],
+            caseStudyLink: '#'
+        },
         // Add more projects as needed
     ];
 
