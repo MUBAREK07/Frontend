@@ -223,6 +223,7 @@ p {
 }
 .container-logo {
   display: flex;
+  margin-left: 25px;
   align-items: end;
   justify-content: center;
   text-decoration: none;
@@ -262,6 +263,7 @@ p {
 .nav-list {
   display: flex;
   list-style: none;
+  margin-right: 350px;
 }
 
 .nav-list li {
@@ -303,6 +305,9 @@ p {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  margin-top: -60px;
+  margin-left: -13px;
+  z-index: 1001;;
 }
 
 .hamburger .bar {
@@ -840,6 +845,8 @@ body.modal-open {
 @media (max-width: 768px) {
   .header .container {
     flex-wrap: wrap;
+    justify-content: space-between; /* Keeps them at opposite ends */
+    align-items: center;
   }
 
   .nav-menu {
