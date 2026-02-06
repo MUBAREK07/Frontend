@@ -483,6 +483,7 @@ p {
   border: 1px solid var(--border-color);
   will-change: transform;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .service-card:hover {
