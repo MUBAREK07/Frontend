@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 11,
             category: 'social media post',
             title: 'Tutoring Service Poster',
-            thumbnail: 'images/4.jpg',
-            imageUrl: 'images/4.jpg',
+            thumbnail: 'images/5.jpg',
+            imageUrl: 'images/5.jpg',
             description: 'Colorful educational poster for “Rise Up Astegn Company” tutoring, highlighting math, physics, chemistry, English and computer skills for grades 6–12, with engaging child–mentor imagery and clear contact and social media details.',
             fullDescription: 'The poster design for Rise Up Astegn Company uses bright orange and blue tones with a rising-sun logo to symbolize growth and inspiration for students in grades 6–12. It features bold, friendly typography and a checklist highlighting key subjects: mathematics, physics, chemistry, English, and computer skills. A circular photo layout shows caring tutor–student interaction, reinforcing a supportive learning environment. Clear Amharic messaging, concise English headings, and easily visible phone numbers ensure quick understanding and response. Social media icons at the bottom emphasize modern, connected tutoring services for Addis Ababa learners.',
             toolsUsed: ['Adobe  Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Infographic Design',
             thumbnail: 'images/aydas_nails_infographics.jpg',
             imageUrl: 'images/aydas_nails_infographics.jpg',
-            description: '',
-            fullDescription: '',
+            description: 'Clean, data driven infographic layout highlighting key metrics and process flows for a beauty brand.',
+            fullDescription: 'A visually engaging infographic designed for Aydas Nails to communicate service steps, pricing tiers, and customer satisfaction metrics. The design uses a cohesive color palette, clear iconography, and simplified charts to make complex information easy to scan on social platforms and print handouts. Created to increase shareability and client understanding across marketing channels.',
             toolsUsed: ['Adobe Photoshop', 'Adobe Illustrator', 'and', 'Canva'],
             caseStudyLink: '#'
         },
@@ -195,8 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Atopiclair',
             thumbnail: 'images/8.jpg',
             imageUrl: 'images/8.jpg',
-            description: '',
-            fullDescription: '',
+            description: 'Promotional social media post for Atopiclair skincare, emphasizing soothing properties for sensitive skin.',
+            fullDescription: 'A promotional campaign graphic focusing on Atopiclair’s calming benefits for sensitive and eczema-prone skin. The design balances soft pastel tones with clinical typography, product imagery, and a concise benefits list to build trust and encourage trial. Optimized for Instagram feed and stories with a clear call-to-action and product highlight shots.',
             toolsUsed: ['Adobe Photoshop', 'Canva'],
             caseStudyLink: '#'
         },
@@ -208,6 +208,61 @@ document.addEventListener('DOMContentLoaded', () => {
             imageUrl: 'images/9.jpg',
             description: 'This poster is for the restaurant which serves new food that that is not served before and add chicken leg with two kind of sauces to their menu to express to their customer.',
             fullDescription: 'This poster is for the restaurant which serves new food that that is not served before and add chicken leg with two kind of sauces to their menu to express to their customer. This menu poster for the restaurant is designed by combination of two color background one is to the right and the other one is to left for better comparison to display the foreground clearly with clear food delivery menu and 10% discount that is always for the new food served by the home and their phone number for the person who wants to order the food and delivered to the person home with clear order button and websites link.',
+            toolsUsed: ['Adobe Photoshop', 'Canva'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 20,
+            category: 'Print Media',
+            title: 'Business Card',
+            thumbnail: 'images/aydas_biz_card.jpg',
+            imageUrl: 'images/aydas_biz_card.jpg',
+            description: 'Business card design for Aydas Nails featuring bold pink accents and clear contact information.',
+            fullDescription: 'A double-sided business card for Aydas Nails showcasing brand identity with strong pink highlights, circular logo mark, and clear contact details. The layout balances negative space with a vibrant accent panel to make the contact information immediately legible and memorable. Optimized for print with bleed-safe margins and high-contrast typography.',
+            toolsUsed: ['Adobe Illustrator', 'Adobe Photoshop'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 21,
+            category: 'Logo Design',
+            title: 'Josephine Vibe',
+            thumbnail: 'images/josephine vibe.jpg',
+            imageUrl: 'images/josephine vibe.jpg',
+            description: 'Elegant monogram logo for Josephine Vibe using classic serif forms.',
+            fullDescription: 'A refined monogram mark combining the letters J and V into a timeless emblem suitable for luxury branding. The lockup pairs a strong mark with minimal wordmark treatment for versatile usage across print and digital.',
+            toolsUsed: ['Adobe Illustrator'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 22,
+            category: 'Logo Design',
+            title: 'Aydas Nails',
+            thumbnail: 'images/aydas nail logo.jpg',
+            imageUrl: 'images/aydas nail logo.jpg',
+            description: 'Circular badge logo for Aydas Nails with purple brand color.',
+            fullDescription: 'A circular badge style logo emphasizing the initials and brand tone in a deep purple. Designed for strong recognition across social channels, signage, and packaging with clear contrast and scalable details.',
+            toolsUsed: ['Adobe Illustrator', 'Adobe Photoshop'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 23,
+            category: 'Logo Design',
+            title: 'Ambassador Shopping Mall',
+            thumbnail: 'images/Ambassadar mall logo.jpg',
+            imageUrl: 'images/Ambassadar mall logo.jpg',
+            description: 'Stylized wordmark and crescent mark for a shopping mall brand identity.',
+            fullDescription: 'A distinctive wordmark paired with a crescent motif representing elegance and movement, tailored for a shopping mall identity. The design focuses on legibility and strong brand presence for building signage and marketing materials.',
+            toolsUsed: ['Adobe Illustrator'],
+            caseStudyLink: '#'
+        },
+        {
+            id: 24,
+            category: 'social media post',
+            title: 'Abronet Promotional Poster',
+            thumbnail: 'images/ABRONET POSTER_1.jpg',
+            imageUrl: 'images/ABRONET POSTER_1.jpg',
+            description: 'Promotional poster for Abronet featuring call to action and contact details.',
+            fullDescription: 'A high contrast promotional poster designed for Abronet to promote community services and subscription details. The layout uses bold headline, clear contact information, and illustrative icons to improve readability on social platforms and printed handouts. Optimized for Instagram and Facebook sharing with a strong brand color accent.',
             toolsUsed: ['Adobe Photoshop', 'Canva'],
             caseStudyLink: '#'
         },
@@ -294,7 +349,68 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetSection) {
             targetSection.classList.remove('hidden');
             targetSection.scrollIntoView({ behavior: 'smooth' });
+            // If navigating to portfolio, preload a few thumbnails for quicker display
+            if(sectionId === 'portfolio') preloadPortfolioThumbnails();
         }
+    }
+
+    // Per-section resources (images, etc.) to preload when user navigates or hovers
+    const sectionResources = {
+        hero: [
+            'images/hero-bg.jpg',
+            'images/logo_1.png'
+        ],
+        about: [
+            'images/1.jpg'
+        ],
+        portfolio: portfolioData.map(p => p.thumbnail),
+        services: [],
+        contact: []
+    };
+
+    function preloadResources(urls){
+        if(!urls || !urls.length) return;
+        try{
+            urls.forEach(src => {
+                // Avoid duplicating preloads
+                if(document.querySelector(`link[rel=\"preload\"][href=\"${src}\"]`) || document.querySelector(`link[rel=\"prefetch\"][href=\"${src}\"]`)) return;
+                // Use preload for images likely to be shown soon, otherwise Image() fallback
+                const l = document.createElement('link');
+                l.rel = 'preload';
+                l.as = 'image';
+                l.href = src;
+                l.crossOrigin = 'anonymous';
+                document.head.appendChild(l);
+            });
+        }catch(e){
+            // Fallback: create Image objects
+            urls.forEach(src => { const i = new Image(); i.src = src; });
+        }
+    }
+
+    // Preload resources for a section (safe to call multiple times)
+    function preloadSectionResources(sectionId){
+        try{
+            const urls = sectionResources[sectionId] || [];
+            // Limit to a reasonable number
+            preloadResources(urls.slice(0, 12));
+        }catch(e){}
+    }
+
+    // Preload first few portfolio thumbnails to speed up initial view
+    function preloadPortfolioThumbnails(){
+        try{
+            const toPreload = portfolioData.slice(0,6).map(p => p.thumbnail);
+            toPreload.forEach(src => {
+                if(!document.querySelector(`link[rel=\"preload\"][href=\"${src}\"]`)){
+                    const l = document.createElement('link');
+                    l.rel = 'preload';
+                    l.as = 'image';
+                    l.href = src;
+                    document.head.appendChild(l);
+                }
+            });
+        }catch(e){}
     }
 
     // Toggle mobile navigation menu
@@ -313,13 +429,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        projectsToRender.forEach(project => {
+        projectsToRender.forEach((project, index) => {
             const portfolioItem = document.createElement('div');
             portfolioItem.classList.add('portfolio-item');
             portfolioItem.dataset.id = project.id; // Store project ID for modal
 
+            // For faster perceived load: mark first few images as high-priority
+            const loadingAttr = index < 6 ? 'eager' : 'lazy';
+            const fetchPriority = index < 6 ? 'high' : 'low';
+
             portfolioItem.innerHTML = `
-                <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
+                <img src="${project.thumbnail}" alt="${project.title}" loading="${loadingAttr}" fetchpriority="${fetchPriority}" decoding="async" width="600" height="400">
                 <div class="portfolio-info">
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
@@ -524,7 +644,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+        // also preload resources for the section on hover to improve perceived speed
+        link.addEventListener('pointerenter', () => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#') && href.length > 1) {
+                const id = href.substring(1);
+                preloadSectionResources(id);
+            }
+        });
     });
+
+    // Make the logo link always navigate to the hero section (works from any section)
+    const logoLink = document.querySelector('.container-logo[href="#hero"]');
+    if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSection('hero');
+            // Update nav active
+            navLinks.forEach(l => l.classList.remove('active'));
+            const homeLink = document.querySelector('.nav-link[href="#hero"]');
+            if (homeLink) homeLink.classList.add('active');
+        });
+    }
 
     // Mobile navigation toggle
     hamburger.addEventListener('click', toggleMobileNav);
@@ -579,16 +720,97 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Trigger lazy loading
     lazyLoadImages(); // Although `loading="lazy"` is native, this can add a custom fade-in or handle background images
-});
-const light=document.getElementById("light-theme");
-const dark=document.getElementById("dark-theme");
 
- dark.addEventListener('click', ()=>{document.body.classList.add("dark"); 
-    dark.style.display= "none";
-    light.style.display = "block";
-})
- light.addEventListener('click', ()=>{document.body.classList.remove("dark");
-    light.style.display= "none";
-    dark.style.display = "block"
- })
- 
+    // Header: toggle transparent background when the user scrolls down
+    // Use requestAnimationFrame to avoid layout thrashing
+    (function(){
+        const headerEl = header; // from earlier DOM query
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHeader() {
+            if (lastScrollY > 20) {
+                headerEl.classList.add('scrolled');
+            } else {
+                headerEl.classList.remove('scrolled');
+            }
+            ticking = false;
+        }
+
+        function onScroll() {
+            lastScrollY = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        // initialize state
+        updateHeader();
+    })();
+});
+const light = document.getElementById("light-theme");
+const dark = document.getElementById("dark-theme");
+const logoImg = document.getElementById('dark-logo');
+const lightLogo = document.getElementById('light-logo');
+
+function applyThemeState(){
+    const isDark = document.documentElement.classList.contains('dark') || document.body.classList.contains('dark');
+    // Toggle theme icons
+    if(dark) dark.style.display = isDark ? 'none' : 'block';
+    if(light) light.style.display = isDark ? 'block' : 'none';
+    // Toggle logos: show raster `logoImg` in dark mode, `lightLogo` in light mode
+    if(logoImg) logoImg.style.display = isDark ? 'block' : 'none';
+    if(lightLogo) lightLogo.style.display = isDark ? 'none' : 'block';
+}
+
+function setTheme(theme){
+    if(theme === 'dark'){
+        document.body.classList.add('dark');
+        document.documentElement.classList.add('dark');
+        try{ localStorage.setItem('theme', 'dark'); }catch(e){}
+    } else {
+        document.body.classList.remove('dark');
+        document.documentElement.classList.remove('dark');
+        try{ localStorage.setItem('theme', 'light'); }catch(e){}
+    }
+    applyThemeState();
+}
+
+// Initialize theme from localStorage or OS preference
+try{
+    const stored = localStorage.getItem('theme');
+    if(stored === 'dark'){
+        document.body.classList.add('dark');
+        document.documentElement.classList.add('dark');
+    } else if(stored === 'light'){
+        document.body.classList.remove('dark');
+        document.documentElement.classList.remove('dark');
+    } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        document.body.classList.add('dark');
+        document.documentElement.classList.add('dark');
+    }
+}catch(e){}
+
+// Initialize theme icons/logo on load
+applyThemeState();
+
+    // Preload first portfolio thumbnails right away to improve navigation speed
+    try{ preloadPortfolioThumbnails(); }catch(e){}
+
+if (dark) {
+    dark.addEventListener('click', ()=>{ setTheme('dark'); });
+}
+if (light) {
+    light.addEventListener('click', ()=>{ setTheme('light'); });
+}
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
