@@ -71,6 +71,7 @@ h2 {
   font-weight: 600;
   text-align: center;
   margin-bottom: 2.5rem;
+  margin-top: 1.2rem;
 }
 h3 {
   font-size: 1.75rem;
@@ -260,8 +261,8 @@ p {
   text-decoration: none;
 }
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   color: var(--primary-color);
   transform: scale(3.0);
   transform-origin: center;
@@ -417,22 +418,34 @@ p {
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 70px;
+  /* fixed image column to avoid oversized growth, content column flexible */
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  gap: 48px;
   align-items: center;
 }
 
+/* About image container: center image and constrain height */
+.about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 420px; /* reduced container height */
+  overflow: hidden;
+}
+
 .about-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 360px; /* narrower image column */
+  max-height: 360px; /* reduced displayed height */
+  height: auto;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow-medium);
-  transition: transform 0.3s ease;
-  will-change: transform;
-  backface-visibility: hidden;
+  transition: transform 0.2s ease;
 }
 
 .about-image img:hover {
-  transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -4px, 0);
 }
 
 .about-content h2 {
