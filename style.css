@@ -165,7 +165,7 @@ p {
 /* Header & Navigation */
 .header {
   background-color: var(--card-bg);
-  padding: 6px 0;
+  padding: 4px 0;
   box-shadow: var(--shadow-light);
   position: sticky;
   top: 0;
@@ -175,7 +175,6 @@ p {
 /* Smooth transition when header becomes transparent on scroll */
 .header {
   transition: background-color 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
-  background: transparent;
 }
 .header.scrolled {
   background-color: rgba(255, 255, 255, 0.2);
@@ -217,7 +216,7 @@ p {
 #light-theme{
   display:none;
 }
-#light-Logo{
+#dark-Logo{
   display:none;
 }
 
@@ -254,6 +253,8 @@ p {
   align-items: center;
 }
 .container-logo {
+  max-width: fit-content;
+  max-height: fit-content;
   display: flex;
   margin-left: 25px;
   align-items: end;
@@ -261,21 +262,20 @@ p {
   text-decoration: none;
 }
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   color: var(--primary-color);
-  transform: scale(3.0);
+  transform: scale(2.0);
   transform-origin: center;
   background: transparent;
   background-color: transparent;
   cursor: pointer;
   z-index:1001;
+  animation: pathReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards both; /* Logo entrance animation (subtle slide + fade + pop) */
 }
 
-/* Logo entrance animation (subtle slide + fade + pop) */
-.logo {
-  aanimation: pathReveal 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards both;
-}
+
+
 
 @keyframes logoIntro {
   0% {
@@ -292,10 +292,6 @@ p {
   }
 }
 
-/* Small pop for the text next to the logo */
-.logo_1 {
-  animation: logoPop 800ms cubic-bezier(.22,.9,.12,1) both;
-}
 
 @keyframes logoPop {
   0% { opacity: 0; transform: translateY(-6px) scale(.98); }
@@ -314,11 +310,11 @@ p {
   font-size: 1rem;
   font-style: monaveen luxian;
   font-weight: 200;
-  margin-left: 5px;
   color: var(--primary-color);
-  margin-left: 11px;
+  margin-left: 1px;
+  margin-top: 13px;
   cursor: pointer;
-
+  animation: logoPop 800ms cubic-bezier(.22,.9,.12,1) both; /* Small pop for the text next to the logo */
 }
 @keyframes logoIntro {
   0% {
