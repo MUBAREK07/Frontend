@@ -266,6 +266,17 @@ document.addEventListener('DOMContentLoaded', () => {
             toolsUsed: ['Adobe Photoshop', 'Canva'],
             caseStudyLink: '#'
         },
+        {
+            id: 25,
+            category: 'Logo Design',
+            title: 'Nati Tattoo Mockup',
+            thumbnail: 'images/Nati Tattoo on mockups_2.jpg',
+            imageUrl: 'images/Nati Tattoo on mockups_2.jpg',
+            description: 'Tattoo brand logo presented on a realistic mockup surface.',
+            fullDescription: 'A logo presentation for Nati Tattoo shown on a textured mockup to highlight how the identity appears in practical, real-world branding contexts. The composition emphasizes readability, contrast, and premium visual impact.',
+            toolsUsed: ['Adobe Illustrator', 'Adobe Photoshop'],
+            caseStudyLink: '#'
+        },
         // Add more projects as needed
     ];
 
@@ -293,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navList = document.querySelector('.nav-list');
     const navLinks = document.querySelectorAll('.nav-link');
     const hamburger = document.querySelector('.hamburger');
+    const mainSections = document.querySelectorAll('main section');
 
     const portfolioGrid = document.getElementById('portfolio-grid');
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -323,13 +335,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Navigation for showing/hiding sections
+    // Navigation for smooth in-page scrolling
     function setupNavigation() {
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1); // Remove #
-                showSection(targetId);
+                scrollToSection(targetId);
                 // Update active nav
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
@@ -341,13 +353,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Function to show a specific section and hide others
-    function showSection(sectionId) {
-        const allSections = document.querySelectorAll('main section');
-        allSections.forEach(section => section.classList.add('hidden'));
+    // Show only the selected main section
+    function showOnlySection(sectionId) {
+        mainSections.forEach(section => {
+            section.classList.toggle('hidden', section.id !== sectionId);
+        });
+    }
+
+    // Function to show a section and scroll to it
+    function scrollToSection(sectionId) {
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
-            targetSection.classList.remove('hidden');
+            showOnlySection(sectionId);
             targetSection.scrollIntoView({ behavior: 'smooth' });
             // If navigating to portfolio, preload a few thumbnails for quicker display
             if(sectionId === 'portfolio') preloadPortfolioThumbnails();
@@ -622,7 +639,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setCurrentYear();
 
     // Setup navigation
-    showSection('hero');
+    showOnlySection('hero');
+    scrollToSection('hero');
     setupNavigation();
 
     // Handle all internal links
@@ -634,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const id = href.substring(1);
                 console.log('Showing section:', id);
-                showSection(id);
+                scrollToSection(id);
                 // Update nav active
                 navLinks.forEach(l => {
                     l.classList.remove('active');
@@ -659,7 +677,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
             e.preventDefault();
-            showSection('hero');
+            scrollToSection('hero');
             // Update nav active
             navLinks.forEach(l => l.classList.remove('active'));
             const homeLink = document.querySelector('.nav-link[href="#hero"]');
@@ -694,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (title.includes('Social media')) {
                 category = 'social media post';
             }
-            showSection('portfolio');
+            scrollToSection('portfolio');
             filterProjects(category);
             // Update nav active
             navLinks.forEach(l => l.classList.remove('active'));
@@ -796,21 +814,10 @@ try{
 // Initialize theme icons/logo on load
 applyThemeState();
 
-    // Preload first portfolio thumbnails right away to improve navigation speed
-    try{ preloadPortfolioThumbnails(); }catch(e){}
-
 if (dark) {
     dark.addEventListener('click', ()=>{ setTheme('dark'); });
 }
 if (light) {
     light.addEventListener('click', ()=>{ setTheme('light'); });
 }
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
 
